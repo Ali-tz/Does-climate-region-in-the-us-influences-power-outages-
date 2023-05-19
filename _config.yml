@@ -6,10 +6,8 @@ gem "github-pages", group: :jekyll_plugins
 ---
 layout: page
 title: Does climate region in the us influences power outages ?
-description: Using data over major power outage events in the continental U.S., we will try to understand if major power outages are related to the climate region of the US.
+description: []
 ---
-
-## Does climate region in the us influences power outages ?
 
 show_downloads: false
 google_analytics:
