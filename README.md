@@ -37,7 +37,7 @@ The other categories are much smaller compared to these two.
 
 ### Bivariate Analysis
 
-<iframe src="assets/Mean Anomaly level per U.S State.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/Anomaly-level-per-month.html" width=800 height=600 frameBorder=0></iframe>
 This display the anomaly level in terms of months. We notice that colder it is, the more extreme value el Nino takes. 
 
 <iframe src="assets/Mean Anomaly level per U.S State.html" width=800 height=600 frameBorder=0></iframe>
