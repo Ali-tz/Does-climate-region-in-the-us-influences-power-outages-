@@ -119,3 +119,8 @@ This test will allow us to tell if climate might be related or not to power outt
 <iframe src="assets/Empirical-Distribution-of-the-mean-of-power-outtage.html" width=800 height=600 frameBorder=0></iframe>
 
 As we can see, we can not reject the null hypothesis. Therefore, the power outages may be dependent of the area of the country.
+
+## Conclusion
+
+After these few obesrvation, where we have compared climate over power outtages in differents ways, we can conclude that there actually seem to be a link between these two fact. This final conclusion is made by the last part with the hypothesis testing.
+Furtermore, it would be interesting to relate the cause of outtages power by climate, this could allow us to confirm the previous result and, according to that we could also look at how long it takes to restore the damages and see if each state country is as efficient compared to other or not.
