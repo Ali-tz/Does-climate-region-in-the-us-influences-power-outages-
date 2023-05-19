@@ -2,6 +2,10 @@
 Using the dataset furnished in Data on major power outage events in the continental U.S. at the [adress](https://www.sciencedirect.com/science/article/pii/S2352340918307182), we will try to understand if major power outages are related to the climate region of the US.
 
 ## Introduction
+> The dataset we are considering here describes various information about major outtage patterns, and characteristics of the states in the continental U.S , including their climate and topographical characteristics, electricity consumption patterns, population, and land-cover characteristics.
+This data will be used to answer the following questoin : Are the major outtages distributed according to the climate of the region considered in the country.
+The dataset contains 56 rows. We will look in particular at a few ones which are the YEAR, the MONTH, the CLIMATE.REGION, the CLIMATE.CATEGORY which states if it's warm, cold, or normal, the ANOMALY.LEVEL which states the el Nino level, the CAUSE.CATEGORY describing the category of the event causing the major power outages, the POPDEN_UC (persons per square mile) the population density of the urban clusters, the U.S._STATE, the DEMAND.LOSS.MW (Megawatt), CUSTOMERS.AFFECTED, OUTAGE.RESTORATION.TIME.
+
 
 ## Cleaning and EDA
 
@@ -11,3 +15,7 @@ Using the dataset furnished in Data on major power outage events in the continen
 - we have two columns for start time (date and time separately) and the same goes on for the restoration date, let's merge this two columns into a signle information.
 
 We will denote this three steps as Cleaning step 1, Cleaning step 2, and Cleaning step 3.
+
+### Cleaning step 1
+### Cleaning step 2
+### Cleaning step 3
