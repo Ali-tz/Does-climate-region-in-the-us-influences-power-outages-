@@ -9,11 +9,12 @@ The dataset contains 56 rows. We will look in particular at a few ones which are
 
 
 ## Cleaning and EDA
+> At first the dataframe didn't even look like a dataframe, the columns didn't have any title, some columns were all null and then some values appearede in these columns.
+-  We first found the columns title and put them at their right place and deleted the empty lines. 
+- We normalize percentage columns to make it easier to read and indicate in the columns titles the different densities when needed.
+- we merged the time columns that were redondant and created just one out of each.
 
-> This raw dataset is not easy to read at this point, let's clean it up a little:
--  The first 4 lines represents the title in the excel file, we are only intersted by the fursished tab below. Moreover, we notice we don't have title for our columns because of that, looking depper the columns titles are at the line index 4. 
-- The unit columns is useless, and the first line of the dataset is annoying for future manipulation, we will normalize proportions and for densities denote them in their respective column title. Numeric values will remain the same as the information of numeric seems to be quite obvious facing numbers.
-- we have two columns for start time (date and time separately) and the same goes on for the restoration date, let's merge this two columns into a signle information.
-
-We will denote this three steps as Cleaning step 1, Cleaning step 2, and Cleaning step 3.
+```py
+print(pow_outages.head())
+```
 
