@@ -15,5 +15,5 @@ The dataset contains 56 rows. We will look in particular at a few ones which are
 - we merged the time columns that were redondant and created just one out of each.
 
 ```py
-print(pow_outages[['YEAR', 'MONTH', 'OUTAGE.START.DATE (Day of the week, Month Day, Year)', 'OUTAGE.START.TIME (Hour:Minute:Second (AM / PM))', 'ANOMALY.LEVEL (numeric)', 'CAUSE.CATEGORY', 'POPDEN_UC (persons per square mile)', 'U.S._STATE', 'CLIMATE.REGION', 'CLIMATE.CATEGORY', 'CAUSE.CATEGORY', 'CUSTOMERS.AFFECTED', ]].head().to_markdown(index=False))
+print(pow_outage[['YEAR', 'MONTH', 'OUTAGE.START.DATE (Day of the week, Month Day, Year)', 'OUTAGE.START.TIME (Hour:Minute:Second (AM / PM))', 'ANOMALY.LEVEL (numeric)', 'CAUSE.CATEGORY', 'POPDEN_UC (persons per square mile)', 'U.S._STATE', 'CLIMATE.REGION', 'CLIMATE.CATEGORY', 'CAUSE.CATEGORY', 'CUSTOMERS.AFFECTED', ]].head().to_markdown(index=False))
 ```
