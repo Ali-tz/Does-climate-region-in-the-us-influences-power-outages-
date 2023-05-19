@@ -3,9 +3,13 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 gem "github-pages", group: :jekyll_plugins
-
+---
+layout: page
 title: Does climate region in the us influences power outages ?
 description: Using the dataset furnished in Data on major power outage events in the continental U.S. at the adress https://www.sciencedirect.com/science/article/pii/S2352340918307182, we will try to understand if major power outages are related to the climate region of the US.
+---
+
+## Does climate region in the us influences power outages ?
 
 show_downloads: false
 google_analytics:
