@@ -29,12 +29,12 @@ print(pow_outage[['YEAR', 'MONTH', 'OUTAGE.START.DATE (Day of the week, Month Da
 
 ### Univariate Analysis
 
-<iframe src="assets/file-name.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/Cause category count.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Bivariate Analysis
 
-<iframe src="assets/file-name.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/file-name.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/Anomaly level per month.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/Mean Anomaly level per U.S State.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Interesting Aggregates
 
