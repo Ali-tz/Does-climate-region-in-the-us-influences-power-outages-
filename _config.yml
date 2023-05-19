@@ -4,7 +4,6 @@ plugins:
 
 gem "github-pages", group: :jekyll_plugins
 ---
-layout: page
 title: Does climate region in the us influences power outages ?
 description: []
 ---
