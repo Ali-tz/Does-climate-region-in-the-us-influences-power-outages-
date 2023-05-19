@@ -41,6 +41,7 @@ The other categories are much smaller compared to these two.
 This display the anomaly level in terms of months. We notice that colder it is, the more extreme value el Nino takes. 
 
 <iframe src="assets/Mean Anomaly level per U.S State.html" width=800 height=600 frameBorder=0></iframe>
+Finally, here we can see the mean anomaly value per state. We notice, obviously, that warm states have a higher anomaly level (like Kansa or Texas), and on the other hand colder countries have a lower anomaly level (like North Dakota).
 
 ### Interesting Aggregates
 
@@ -79,3 +80,42 @@ Here wheather tend to have an impact on cause categories of power outages. Let's
 > First, we notice lots of missing values.
 Then we can see that the anomaly level tends to increase every year (except for the system operation disruption). 
 It is hard to conclude something about demand loss as the data has a lot of missingness an d no real patterns, with sometimes extrem variation. For example in 2015 we have 338.000000 fuel supply emergency and the next year 50.000000. Again the system operatino disruption do not appear as being touched by this.
+
+## Assessment of Missingness
+
+### NMAR Analysis
+> The column HURRICANE.NAMES is NMAR. This is due to the fact that hurricanes are not the cause of every power outtages. Therefore the information is not missig at random, it is missing because it is missing in real life.
+
+### Missingness Dependency
+> We recall our initial question is "are the major outtages distributed according to the climate of the region considered in the country?". 
+
+We will consider, for our MCAR test, the column CUSTOMERS.AFFECTED and see it's distribution when missing or not with the column of postal code. Here is the representation : 
+<iframe src="assets/Postal Code by Missingness of Customer affected.html" width=800 height=600 frameBorder=0></iframe>
+As we can see both are, as it seems, not related.
+
+Then let's consider the empirical distribution of the test statistic we performed, along with the observed statistics.
+<iframe src="assets/Empirical-distribution-of-the-TVD-for-the-Customer-affected-columns.html" width=800 height=600 frameBorder=0></iframe>
+These informations, on the second plot, allow us to conclude that the column CUSTOMERS.AFFECTED is MCAR.
+
+For the case of MAR, we consider the column OUTAGE.RESTORATION.TIME. This one is likely to be MAR. Let's look at it's distributions : 
+<iframe src="assets/Postal Code by Missingness of outage restoration time.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/Empirical-distribution-of-the-TVD-for-the-outage-restoration-time-columns.html" width=800 height=600 frameBorder=0></iframe>
+By using the same analysis as on the previous case, wa can conclude this columns is MAR.
+
+
+## Hypothesis Testing
+We are trying to determine if the major outages occurs accordingly to the region where it happens.
+For that let's look at the distribution of power outages per climate region. For that we will perform a hypothesis test:
+- Null Hypothesis: major power outages and climate region are related 
+- Alternative Hypothesis: major power outages and climate region are not related according to the distribution shown below
+- Observation: power outages
+- Sample : distribution of the power outtages per climate region
+- Test Statistic: mean
+- p_val = 0.05
+
+
+This test will allow us to tell if climate might be related or not to power outtages that happens in the US. Let's take a look to the results.
+
+<iframe src="assets/Empirical-Distribution-of-the-mean-of-power-outtage.html" width=800 height=600 frameBorder=0></iframe>
+
+As we can see, we can not reject the null hypothesis. Therefore, the power outages may be dependent of the area of the country.
