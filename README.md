@@ -2,8 +2,8 @@
 Using the dataset furnished in Data on major power outage events in the continental U.S. at the [adress](https://www.sciencedirect.com/science/article/pii/S2352340918307182), we will try to understand if major power outages are related to the climate region of the US.
 
 ## Introduction
-> The dataset we are considering here describes various information about major outtage patterns, and characteristics of the states in the continental U.S , including their climate and topographical characteristics, electricity consumption patterns, population, and land-cover characteristics.
-This data will be used to answer the following questoin : Are the major outtages distributed according to the climate of the region considered in the country.
+> The dataset we are considering here describes various information about major outage patterns, and characteristics of the states in the continental U.S , including their climate and topographical characteristics, electricity consumption patterns, population, and land-cover characteristics.
+This data will be used to answer the following questoin : Are the major outages distributed according to the climate of the region considered in the country.
 The dataset contains 56 rows. We will look in particular at a few ones which are the YEAR, the MONTH, the CLIMATE.REGION, the CLIMATE.CATEGORY which states if it's warm, cold, or normal, the ANOMALY.LEVEL which states the el Nino level, the CAUSE.CATEGORY describing the category of the event causing the major power outages, the POPDEN_UC (persons per square mile) the population density of the urban clusters, the U.S._STATE, the DEMAND.LOSS.MW (Megawatt) describing the amount of peak demand lost during an outage event , CUSTOMERS.AFFECTED counting the number of customers affected by the power outage event, and OUTAGE.RESTORATION.TIME wich is the moment of outage restoration event.
 .
 
@@ -31,8 +31,8 @@ print(pow_outage[['YEAR', 'MONTH', 'OUTAGE.START.DATE (Day of the week, Month Da
 
 <iframe src="assets/Cause category count.html" width=800 height=600 frameBorder=0></iframe>
 
-This figure inform us about the number of each cause of power outtage. 
-As we can see, the main reasin in the US of power outtage is due to severe weather. Then we have intentional attacks that is half proportion of the first one.
+This figure inform us about the number of each cause of power outage. 
+As we can see, the main reasin in the US of power outage is due to severe weather. Then we have intentional attacks that is half proportion of the first one.
 The other categories are much smaller compared to these two.
 
 ### Bivariate Analysis
@@ -84,10 +84,10 @@ It is hard to conclude something about demand loss as the data has a lot of miss
 ## Assessment of Missingness
 
 ### NMAR Analysis
-> The column HURRICANE.NAMES is NMAR. This is due to the fact that hurricanes are not the cause of every power outtages. Therefore the information is not missig at random, it is missing because it is missing in real life.
+> The column HURRICANE.NAMES is NMAR. This is due to the fact that hurricanes are not the cause of every power outages. Therefore the information is not missig at random, it is missing because it is missing in real life.
 
 ### Missingness Dependency
-> We recall our initial question is "are the major outtages distributed according to the climate of the region considered in the country?". 
+> We recall our initial question is "are the major outages distributed according to the climate of the region considered in the country?". 
 
 We will consider, for our MCAR test, the column CUSTOMERS.AFFECTED and see it's distribution when missing or not with the column of postal code. Here is the representation : 
 <iframe src="assets/Postal Code by Missingness of Customer affected.html" width=800 height=600 frameBorder=0></iframe>
@@ -109,18 +109,18 @@ For that let's look at the distribution of power outages per climate region. For
 - Null Hypothesis: major power outages and climate region are related 
 - Alternative Hypothesis: major power outages and climate region are not related according to the distribution shown below
 - Observation: power outages
-- Sample : distribution of the power outtages per climate region
+- Sample : distribution of the power outages per climate region
 - Test Statistic: mean
 - p_val = 0.05
 
 
-This test will allow us to tell if climate might be related or not to power outtages that happens in the US. Let's take a look to the results.
+This test will allow us to tell if climate might be related or not to power outages that happens in the US. Let's take a look to the results.
 
-<iframe src="assets/Empirical-Distribution-of-the-mean-of-power-outtage.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/Empirical-Distribution-of-the-mean-of-power-outeage.html" width=800 height=600 frameBorder=0></iframe>
 
 As we can see, we can not reject the null hypothesis. Therefore, the power outages may be dependent of the area of the country.
 
 ## Conclusion
 
-After these few obesrvation, where we have compared climate over power outtages in differents ways, we can conclude that there actually seem to be a link between these two fact. This final conclusion is made by the last part with the hypothesis testing.
-Furtermore, it would be interesting to relate the cause of outtages power by climate, this could allow us to confirm the previous result and, according to that we could also look at how long it takes to restore the damages and see if each state country is as efficient compared to other or not.
+After these few obesrvation, where we have compared climate over power outages in differents ways, we can conclude that there actually seem to be a link between these two fact. This final conclusion is made by the last part with the hypothesis testing.
+Furtermore, it would be interesting to relate the cause of outages power by climate, this could allow us to confirm the previous result and, according to that we could also look at how long it takes to restore the damages and see if each state country is as efficient compared to other or not.
